@@ -139,6 +139,16 @@
     width: 100%;
   }
 
+  .main-nav a.nav-current {
+    color: #61B7CC;
+    font-weight: 600;
+    pointer-events: none;
+  }
+
+  .main-nav a.nav-current::after {
+    width: 100%;
+  }
+
   /* ========================================
      CALL BUTTONS
      ======================================== */
@@ -369,12 +379,12 @@
       }
     });
 
-    // Hide current page from nav (existing functionality)
+    // Highlight current page in nav
     const currentPath = window.location.pathname.replace(/\/$/, "");
     document.querySelectorAll(".main-nav a").forEach((link) => {
       const linkPath = link.getAttribute("href").replace(/\/$/, "");
       if (linkPath && linkPath === currentPath) {
-        link.parentElement.style.display = "none";
+        link.classList.add("nav-current");
       }
     });
   });

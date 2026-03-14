@@ -1,7 +1,7 @@
-/* === SECTION HERO === */
+/* === PRICING PAGE STYLES === */
 
 :root {
-  /* NEW BRAND PALETTE - Brenneis AI Teal System */
+  /* Brand Palette - Teal System */
   --color-primary: #134D62;      /* Deep Teal - Main brand, hero backgrounds */
   --color-secondary: #2D7E92;    /* Mid Teal - Secondary elements */
   --color-accent: #61B7CC;       /* Medium Cyan - Primary CTAs */
@@ -10,7 +10,10 @@
   /* Neutrals */
   --color-dark: #1A2F38;         /* Charcoal - Body text on light backgrounds */
   --color-light: #FFFFFF;        /* Pure White */
+  --color-bg-light: #F4F7F9;     /* Cool Grey - Section backgrounds */
   --color-text-light: #E5F3F7;   /* Light text on dark backgrounds */
+  --color-border: #E5E7EB;       /* Border color */
+  --color-text-muted: #6B7280;   /* Muted text */
 
   /* System */
   --nav-height: 80px;
@@ -225,45 +228,6 @@
 
 
 /* === SECTION DETAIL === */
-
-/* ========================================
-   NEW BRAND STANDARDS - BRENNEIS AI
-   ======================================== */
-:root {
-  /* Brand Palette - Teal System */
-  --color-primary: #134D62;      /* Deep Teal - Headers, dark sections */
-  --color-secondary: #2D7E92;    /* Mid Teal - Secondary elements */
-  --color-accent: #61B7CC;       /* Medium Cyan - Primary CTAs, highlights */
-  --color-highlight: #4B9EC2;    /* Sky Blue - Hover states */
-
-  /* Neutrals */
-  --color-dark: #1A2F38;         /* Charcoal - Body text */
-  --color-light: #FFFFFF;        /* Pure White - Cards */
-  --color-bg-light: #F4F7F9;     /* Cool Grey - Section backgrounds */
-  --color-text-light: #E5F3F7;   /* Light text on dark backgrounds */
-  --color-border: #E5E7EB;       /* Border color */
-  --color-text-muted: #6B7280;   /* Muted text (silver replacement) */
-
-  /* System */
-  --transition-speed: 300ms;
-}
-
-/* ========================================
-   BASE STYLES
-   ======================================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--color-light);
-  color: var(--color-dark);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
 
 /* ========================================
    CONTAINER & SECTION LAYOUT
