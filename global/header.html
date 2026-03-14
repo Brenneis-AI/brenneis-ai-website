@@ -1,0 +1,381 @@
+<!-- BEGIN HEADER SECTION -->
+<header class="site-header">
+  <div class="header-container">
+    <!-- Logo & Brand Name -->
+    <div class="logo-area">
+      <img src="https://storage.googleapis.com/msgsndr/xPpGvlvaXWhYtIJUg0CZ/media/695d3c11b75f6f1efc4079a0.png"
+        alt="Brenneis AI Logo"
+        class="logo"
+      />
+      <span class="brand-name">Brenneis AI</span>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="https://blog.brenneisai.com/ai-basics"
+            target="_blank" rel="noopener noreferrer">
+            Our Blog</a></li>
+        <li><a href="/calendar">Free Consultation</a></li>
+      </ul>
+      
+      <!-- Call button inside mobile menu (hidden on desktop) -->
+      <div class="mobile-call-button">
+        <a href="tel:434-443-5963">Call or Text Now: 434-443-5963</a>
+      </div>
+    </nav>
+
+    <!-- Call Button (desktop only) -->
+    <div class="call-button desktop-only">
+      <a href="tel:434-443-5963">Call or Text Now: 434-443-5963</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* ========================================
+     GLOBAL HEADER - MATCHES HERO AESTHETIC
+     ======================================== */
+
+  .site-header {
+    background-color: #1A2F38;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .header-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  /* ========================================
+     LOGO
+     ======================================== */
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo {
+    height: 60px;
+    width: auto;
+    transition: opacity 0.3s ease;
+  }
+
+  .logo:hover {
+    opacity: 0.85;
+  }
+  
+  .brand-name {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  /* ========================================
+     NAVIGATION
+     ======================================== */
+
+  .main-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  .main-nav a {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .main-nav a:hover {
+    color: #61B7CC;
+  }
+
+  .main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #61B7CC;
+    transition: width 0.3s ease;
+  }
+
+  .main-nav a:hover::after {
+    width: 100%;
+  }
+
+  /* ========================================
+     CALL BUTTONS
+     ======================================== */
+
+  /* Desktop call button */
+  .call-button a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #61B7CC;
+    color: #1A2F38;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .call-button a:hover {
+    background-color: #4B9EC2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .call-button a:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Mobile call button (inside nav menu) - hidden on desktop */
+  .mobile-call-button {
+    display: none;
+  }
+  
+  /* ========================================
+     MOBILE MENU TOGGLE
+     ======================================== */
+
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .mobile-menu-toggle svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* ========================================
+     RESPONSIVE BREAKPOINTS
+     ======================================== */
+
+  /* Tablet & Below (< 992px) */
+  @media (max-width: 991px) {
+    .header-container {
+      padding: 0.75rem 1.5rem;
+    }
+
+    .logo {
+      height: 50px;
+    }
+    
+    .brand-name {
+      font-size: 1.25rem;
+    }
+
+    /* Show hamburger, hide desktop call button */
+    .mobile-menu-toggle {
+      display: block;
+    }
+    
+    .desktop-only {
+      display: none !important;
+    }
+
+    /* Mobile nav dropdown */
+    .main-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background-color: #1A2F38;
+      padding: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .main-nav.active {
+      display: block;
+    }
+
+    .main-nav ul {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .main-nav li {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .main-nav li:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Keep border above call button */
+    }
+
+    .main-nav a {
+      display: block;
+      padding: 1rem;
+      font-size: 16px;
+    }
+
+    .main-nav a::after {
+      display: none;
+    }
+
+    /* Show call button in mobile menu */
+    .mobile-call-button {
+      display: block;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .mobile-call-button a {
+      display: block;
+      padding: 14px 20px;
+      background-color: #61B7CC;
+      color: #1A2F38;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-call-button a:hover {
+      background-color: #4B9EC2;
+    }
+  }
+
+  /* Mobile (< 768px) */
+  @media (max-width: 767px) {
+    .header-container {
+      padding: 0.75rem 1.25rem;
+    }
+
+    .logo {
+      height: 45px;
+    }
+    
+    .brand-name {
+      font-size: 1.15rem;
+    }
+
+    .mobile-call-button a {
+      font-size: 14px;
+      padding: 12px 16px;
+    }
+  }
+
+  /* Small Mobile (< 480px) */
+  @media (max-width: 479px) {
+    .header-container {
+      padding: 0.75rem 1rem;
+    }
+
+    .logo {
+      height: 40px;
+    }
+    
+    .brand-name {
+      font-size: 1rem;
+    }
+
+    .mobile-call-button a {
+      font-size: 13px;
+      padding: 10px 14px;
+    }
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Mobile Menu Toggle
+    const toggleBtn = document.querySelector(".mobile-menu-toggle");
+    const nav = document.querySelector(".main-nav");
+    
+    if (toggleBtn && nav) {
+      toggleBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        nav.classList.toggle("active");
+      });
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (nav && nav.classList.contains("active")) {
+        if (!nav.contains(e.target) && !toggleBtn.contains(e.target)) {
+          nav.classList.remove("active");
+        }
+      }
+    });
+
+    // Close mobile menu when clicking a link
+    const navLinks = document.querySelectorAll(".main-nav a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        if (nav && nav.classList.contains("active")) {
+          nav.classList.remove("active");
+        }
+      });
+    });
+
+    // Close mobile menu when window resizes above mobile breakpoint
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 991 && nav && nav.classList.contains("active")) {
+        nav.classList.remove("active");
+      }
+    });
+
+    // Hide current page from nav (existing functionality)
+    const currentPath = window.location.pathname.replace(/\/$/, "");
+    document.querySelectorAll(".main-nav a").forEach((link) => {
+      const linkPath = link.getAttribute("href").replace(/\/$/, "");
+      if (linkPath && linkPath === currentPath) {
+        link.parentElement.style.display = "none";
+      }
+    });
+  });
+</script>

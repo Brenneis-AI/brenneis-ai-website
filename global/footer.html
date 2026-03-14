@@ -1,0 +1,308 @@
+<!-- ========================================
+     FOOTER SECTION
+     Matches new header design and brand colors
+     ======================================== -->
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Footer Grid -->
+    <div class="footer-grid">
+      
+      <!-- Company Column -->
+      <div class="footer-column">
+        <h3 class="footer-heading">Company</h3>
+        <ul class="footer-links">
+          <li><a href="/about">About Us</a></li>
+          <li><a href="https://blog.brenneisai.com/ai-basics">Blog</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/case-study">Case Study</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Care Column -->
+      <div class="footer-column">
+        <h3 class="footer-heading">Support</h3>
+        <ul class="footer-links">
+          <li><a href="/contact-us">Contact Us</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/calendar">Book a Call</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Column -->
+      <div class="footer-column">
+        <h3 class="footer-heading">Legal</h3>
+        <ul class="footer-links">
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Follow Us Column -->
+      <div class="footer-column">
+        <h3 class="footer-heading">Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/company/brenneis-ai/" class="social-icon" aria-label="LinkedIn" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="https://x.com/Brenneis_AI" class="social-icon" aria-label="Twitter" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+            </svg>
+          </a>
+          <a href="https://facebook.com/BrenneisAI" class="social-icon" aria-label="Facebook" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com/Brenneis_ai" class="social-icon" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="copyright">
+        <p>&copy; 2026 Brenneis AI. All rights reserved.</p>
+      </div>
+      <div class="footer-logo">
+        <img 
+          src="https://storage.googleapis.com/msgsndr/xPpGvlvaXWhYtIJUg0CZ/media/695d3c11b75f6f1efc4079a0.png" 
+          alt="Brenneis AI Logo" 
+          class="logo-small" 
+        />
+      </div>
+    </div>
+    
+  </div>
+</footer>
+
+<style>
+/* ========================================
+   FOOTER SECTION
+   Matches header design with brand colors
+   ======================================== */
+
+.site-footer {
+  background: #1A2F38; /* Dark navy-teal - matches header */
+  color: #FFFFFF;
+  padding: clamp(48px, 6vw, 64px) 0 clamp(24px, 3vw, 32px);
+  position: relative;
+  border-top: 2px solid #61B7CC;
+}
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 4vw, 60px);
+}
+
+/* ========================================
+   FOOTER GRID
+   ======================================== */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(32px, 4vw, 48px);
+  margin-bottom: clamp(40px, 5vw, 56px);
+}
+
+/* ========================================
+   FOOTER COLUMN
+   ======================================== */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Heading */
+.footer-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: clamp(14px, 1vw, 16px);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #61B7CC; /* Light teal - matches header nav hover */
+  margin: 0 0 20px 0;
+}
+
+/* Links List */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links li {
+  margin: 0;
+}
+
+.footer-links a {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1vw, 16px);
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: all 300ms ease;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #61B7CC; /* Light teal underline */
+  transition: width 300ms ease;
+}
+
+.footer-links a:hover {
+  color: #61B7CC; /* Light teal on hover */
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   SOCIAL ICONS
+   ======================================== */
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(97, 183, 204, 0.15); /* Light teal with transparency */
+  color: #61B7CC; /* Light teal */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease;
+}
+
+.social-icon:hover {
+  background: #61B7CC; /* Light teal background */
+  color: #1A2F38; /* Dark text */
+  transform: translateY(-3px);
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ========================================
+   FOOTER BOTTOM
+   ======================================== */
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: clamp(24px, 3vw, 32px);
+  border-top: 1px solid rgba(97, 183, 204, 0.2); /* Light teal border */
+}
+
+/* Copyright */
+.copyright {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: clamp(13px, 0.9vw, 14px);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.copyright p {
+  margin: 0;
+}
+
+/* Logo */
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-small {
+  height: 60px; /* Matches header logo size */
+  width: auto;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Tablet (< 992px) */
+@media (max-width: 991px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    order: -1; /* Logo appears above copyright on mobile */
+  }
+}
+
+/* Small Mobile (< 480px) */
+@media (max-width: 479px) {
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+.footer-links a:focus,
+.social-icon:focus {
+  outline: 2px solid #61B7CC;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-links a,
+  .footer-links a::after,
+  .social-icon {
+    transition: none !important;
+  }
+}
+</style>

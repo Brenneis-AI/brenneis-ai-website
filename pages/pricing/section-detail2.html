@@ -1,0 +1,181 @@
+  <section class="container" id="pricing">
+    <!-- BUILD FEE SECTION -->
+    <h1><strong>One-Time Build Fee</strong></h1>
+    <p class="subheadline">
+      <strong>Build pricing depends on your website complexity and automation needs.</strong><br>
+      <em>We'll review your requirements during your free consultation and recommend the right build level.</em>
+    </p>
+
+    <div class="build-cards">
+      <div class="build-card">
+        <h3>Simple Build</h3>
+        <p class="card-tagline">Basic website with essential automation. Perfect for getting started.</p>
+        <div class="build-price">$1,750</div>
+        <div class="pages">up to 5 pages</div>
+        <ul>
+          <li>Custom design</li>
+          <li>Mobile-optimized</li>
+          <li>Basic automation</li>
+          <li>Up to 5 team seats</li>
+        </ul>
+      </div>
+      <div class="build-card">
+        <h3>Standard Build</h3>
+        <p class="card-tagline">More features, more automation. Built for growing organizations.</p>
+        <div class="build-price">$2,500-$3,500</div>
+        <div class="pages">up to 10 pages</div>
+        <ul>
+          <li>Everything in Simple Build</li>
+          <li>Advanced automation workflows</li>
+          <li>Data migration included</li>
+          <li>Up to 10 team seats</li>
+        </ul>
+      </div>
+      <div class="build-card">
+        <h3>Complex Build</h3>
+        <p class="card-tagline">Comprehensive system with extensive automation and integrations.</p>
+        <div class="build-price">$4,000-$5,000</div>
+        <div class="pages">10+ pages</div>
+        <ul>
+          <li>Everything in Standard Build</li>
+          <li>Custom integrations</li>
+          <li>Member portal/database</li>
+          <li>10+ team seats</li>
+        </ul>
+      </div>
+    </div>
+
+   <p class="subheadline" style="margin-top: 2rem; font-size: 1.3rem;">
+  <strong>Virginia Nonprofits:</strong> 25% off build fee + flexible payment plans available<br>
+  <strong>Veteran-Owned Businesses:</strong> 25% off build fee + flexible payment plans available<br>
+  <span style="font-size: 1rem; color: var(--color-text-muted);">(Discounts not stackable)</span>
+</p>
+
+    <!-- MONTHLY SUBSCRIPTION SECTION -->
+    <h1 style="margin-top:4rem;"><strong>Monthly Subscription Tiers</strong></h1>
+    <div class="slider-container">
+      <div class="slider-label">
+        Pricing based on your contact volume and usage needs.<br>
+        <span>Not sure which tier you need? We'll help you choose during your free audit.</span>
+      </div>
+      <input type="range" min="0" max="5" value="0" class="slider" id="contactSlider">
+
+      <div class="billing-toggle">
+        <label>
+          <input type="checkbox" id="billingMode" />
+          <span class="toggle-label">
+            <span class="monthly-label" id="monthlyLabel">Monthly</span>
+            <span class="switch"></span>
+            <span class="annual-label" id="annualLabel">
+              Annual Save 10%
+            </span>
+          </span>
+        </label>
+      </div>
+
+      <div class="plan-wrapper">
+        <button class="arrow-btn" id="arrowLeft">&lt;</button>
+        <div class="plan-display" id="planDisplay"></div>
+        <button class="arrow-btn" id="arrowRight">&gt;</button>
+      </div>
+
+      <button class="compare-btn" id="compareBtn">Compare All Tiers Side-by-Side →</button>
+
+      <p class="subheadline" style="margin-top: 2rem; font-size: 1.3rem;">
+  <strong>All pricing shown is standard rate.</strong><br>
+  Virginia nonprofits receive 15% off monthly subscriptions (forever).<br>
+  Veteran-owned businesses receive 15% off monthly subscriptions (forever).<br>
+  <span style="font-size: 1rem; color: var(--color-text-muted);">(Discounts not stackable)</span>
+</p>
+    </div>
+  </section>
+
+  <!-- MODAL POPUP -->
+  <div id="comparisonModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="modalClose">&times;</span>
+
+      <div class="modal-header">
+        <h2>Compare All Tiers</h2>
+        <p>Not sure which tier fits your organization? During your free consultation, we'll review your contact list and usage needs to recommend the right tier. You can always adjust tiers later—no penalties.</p>
+      </div>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="tier-name">Rookie<br>League</th>
+            <th class="tier-name">Single-A</th>
+            <th class="tier-name">Double-A</th>
+            <th class="tier-name">Triple-A</th>
+            <th class="tier-name">Major<br>League</th>
+            <th class="tier-name">Dynasty</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Price/mo</strong></td>
+            <td>$127</td>
+            <td>$197</td>
+            <td>$297</td>
+            <td>$397</td>
+            <td>$597</td>
+            <td>$1,197</td>
+          </tr>
+          <tr>
+            <td><strong>Contacts</strong></td>
+            <td>1,000</td>
+            <td>2,500</td>
+            <td>5,000</td>
+            <td>10,000</td>
+            <td>25,000</td>
+            <td>100,000</td>
+          </tr>
+          <tr>
+            <td><strong>Emails/mo</strong></td>
+            <td>5,000</td>
+            <td>10,000</td>
+            <td>20,000</td>
+            <td>40,000</td>
+            <td>100,000</td>
+            <td>500,000</td>
+          </tr>
+          <tr>
+            <td><strong>SMS/mo</strong></td>
+            <td>200</td>
+            <td>400</td>
+            <td>600</td>
+            <td>1,000</td>
+            <td>2,000</td>
+            <td>5,000</td>
+          </tr>
+          <tr>
+            <td><strong>Voice Min/mo</strong></td>
+            <td>100</td>
+            <td>200</td>
+            <td>300</td>
+            <td>500</td>
+            <td>1,000</td>
+            <td>3,000</td>
+          </tr>
+          <tr>
+            <td><strong>AI Chat Replies</strong></td>
+            <td>400/mo</td>
+            <td>800/mo</td>
+            <td>1,200/mo</td>
+            <td>Unlimited</td>
+            <td>Unlimited</td>
+            <td>Unlimited</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="modal-footer">
+  <p><strong>Virginia Nonprofits:</strong> 15% off all monthly tiers (forever)</p>
+  <p><strong>Veteran-Owned Businesses:</strong> 15% off all monthly tiers (forever)</p>
+  <p style="font-size: 0.95rem; color: var(--color-text-muted);">(Discounts not stackable)</p>
+  <p style="margin-top: 1rem;">Most organizations start on Rookie or Single-A tier.</p>
+  <a href="https://brenneisai.com/calendar" class="modal-cta">Book Your Free Audit</a>
+</div>
+    </div>
+  </div>

@@ -1,0 +1,452 @@
+/* ========================================
+   ABOUT PAGE — CONSOLIDATED STYLES
+   Source: pages/about/page.css
+   Extracted from section-main.html
+   ======================================== */
+
+/* ========================================
+   BRAND FOUNDATION - BRENNEIS AI
+   ======================================== */
+:root {
+  /* Teal Palette */
+  --color-primary: #134D62;
+  --color-secondary: #2D7E92;
+  --color-accent: #61B7CC;
+  --color-highlight: #4B9EC2;
+
+  /* Neutrals */
+  --color-dark: #1A2F38;
+  --color-light: #FFFFFF;
+  --color-bg-light: #F4F7F9;
+  --color-bg-card: #E5F3F7;
+  --color-text-muted: #6B7280;
+  --color-border: #E5E7EB;
+
+  /* Typography */
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Source Sans Pro', sans-serif;
+
+  /* System */
+  --transition: 300ms ease;
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-light);
+  color: var(--color-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero {
+  padding: 60px 0 20px 0;
+  background: var(--color-dark);
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 24px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.hero-content {
+  text-align: left;
+  padding: 0 84px 0 84px;
+}
+
+.hero-tagline {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--color-highlight);
+  margin-bottom: 36px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--color-light);
+  margin-bottom: 36px;
+}
+
+.hero h1 .highlight {
+  color: var(--color-accent);
+  display: block;
+  margin-top: 8px;
+}
+
+.hero .subtitle {
+  font-size: 30px;
+  line-height: 1.4;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 16px 32px;
+  background: var(--color-accent);
+  color: var(--color-dark);
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all var(--transition);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-cta:hover {
+  background: var(--color-highlight);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 450px;
+  padding: 0;
+}
+
+.about-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.blended-family {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  -webkit-mask-image: radial-gradient(closest-side, black 50%, transparent 95%);
+  mask-image: radial-gradient(closest-side, black 50%, transparent 95%);
+  filter: grayscale(100%) contrast(1.2) brightness(1.05);
+  opacity: 0.95;
+  display: block;
+}
+
+/* ========================================
+   CHAPTER SECTIONS
+   ======================================== */
+.chapter {
+  padding: 80px 48px;
+  background: var(--color-light);
+}
+
+.chapter.alt-bg {
+  background: var(--color-bg-light);
+}
+
+.chapter-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 64px auto;
+}
+
+.chapter-header h2 {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.chapter-header p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* ========================================
+   STORY CARDS - ALTERNATING LAYOUT
+   ======================================== */
+.story-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 80px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.story-card:last-child {
+  margin-bottom: 0;
+}
+
+.story-card.reverse {
+  direction: rtl;
+}
+
+.story-card.reverse > * {
+  direction: ltr;
+}
+
+.story-content {
+  padding: 0;
+}
+
+.story-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--color-dark);
+  margin-bottom: 24px;
+  text-align: left;
+  max-width: 600px;
+}
+
+.story-content p:last-child {
+  margin-bottom: 0;
+}
+
+.story-content p strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.story-content p em {
+  color: var(--color-secondary);
+  font-style: italic;
+}
+
+.story-image {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  background: var(--color-bg-light);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  font-size: 16px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ========================================
+   PULL QUOTE SECTIONS
+   ======================================== */
+.pull-quote {
+  background: var(--color-bg-card);
+  padding: 80px 48px;
+  text-align: center;
+}
+
+.pull-quote blockquote {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-primary);
+  font-style: italic;
+  position: relative;
+}
+
+.pull-quote blockquote::before {
+  content: '"';
+  font-size: 80px;
+  color: var(--color-accent);
+  opacity: 0.3;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  font-family: Georgia, serif;
+}
+
+/* ========================================
+   STATS/PROOF BAR
+   ======================================== */
+.stats-bar {
+  background: var(--color-secondary);
+  padding: 64px 48px;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  text-align: center;
+}
+
+.stat {
+  color: var(--color-light);
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* ========================================
+   IMPACT CALLOUTS (Bordered highlights)
+   ======================================== */
+.impact-callout {
+  max-width: 1200px;
+  margin: 0 auto 48px auto;
+  padding: 32px 40px;
+  border-left: 4px solid var(--color-accent);
+  background: var(--color-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.impact-callout p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--color-dark);
+  margin: 0;
+}
+
+.impact-callout strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ========================================
+   CASE STUDY LINK (inline contextual)
+   ======================================== */
+.case-study-inline-link {
+  color: var(--color-highlight);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(75, 158, 194, 0.4);
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.case-study-inline-link:hover {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+/* ========================================
+   FINAL DECLARATION - DARK SECTION
+   ======================================== */
+.final-declaration {
+  background: var(--color-dark);
+  padding: 120px 48px;
+  text-align: center;
+}
+
+.final-declaration-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.final-declaration h2 {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-light);
+  margin-bottom: 24px;
+}
+
+.final-declaration p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 40px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 24px 64px 24px;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-content {
+    text-align: center;
+    padding: 0 24px;
+  }
+
+  .hero-image {
+    justify-content: center;
+    min-height: 300px;
+  }
+
+  .about-image-wrapper {
+    justify-content: center;
+  }
+
+  .blended-family {
+    max-width: 380px;
+    -webkit-mask-image: radial-gradient(closest-side, black 60%, transparent 95%);
+    mask-image: radial-gradient(closest-side, black 60%, transparent 95%);
+  }
+
+  .hero h1 { font-size: 36px; }
+  .hero .subtitle { font-size: 18px; }
+  .chapter { padding: 64px 24px; }
+  .chapter-header h2 { font-size: 32px; margin-bottom: 32px; }
+  .story-card { grid-template-columns: 1fr; gap: 32px; margin-bottom: 64px; }
+  .story-card.reverse { direction: ltr; }
+  .story-content p { font-size: 16px; max-width: 100%; }
+  .story-image { min-height: 300px; }
+  .pull-quote { padding: 64px 24px; }
+  .pull-quote blockquote { font-size: 24px; }
+  .pull-quote blockquote::before { font-size: 60px; top: -15px; left: -10px; }
+  .stats-bar { padding: 48px 24px; }
+  .stats-container { grid-template-columns: 1fr; gap: 32px; }
+  .impact-callout { padding: 24px; margin-bottom: 32px; }
+  .impact-callout p { font-size: 16px; }
+  .final-declaration { padding: 80px 24px; }
+  .final-declaration h2 { font-size: 32px; }
+  .final-declaration p { font-size: 18px; }
+}

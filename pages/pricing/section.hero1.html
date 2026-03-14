@@ -1,0 +1,249 @@
+<section class="pricing-s1-section" id="hero">
+  <div class="pricing-s1-content">
+    <h1 class="pricing-s1-title">
+      <span class="title-line">Every Feature.<br> One Price.</span>
+      <span class="title-line highlight">No Gate Keeping.<br> No Penalties for Being Small.</span>
+    </h1>
+
+    <h2 class="pricing-s1-subtitle">
+      <span class="static-text">Enterprise Power—Now Built for Virginia Nonprofits.</span>
+    </h2>
+
+    <p class="pricing-s1-description">
+     At Brenneis AI, we believe Virginia nonprofits deserve the same tools as big organizations—without the enterprise price tag. That's why every feature we offer is unlocked from day one. No hidden fees. No surprise upgrades. Just transparent pricing and full access to everything you need to grow your mission.
+    </p>
+
+    <div class="pricing-s1-cta">
+      <a href="https://brenneisai.com/calendar" class="cta-button">
+        <span class="button-text">Book Your Free Nonprofit Audit</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Hero Section CSS - REDESIGNED TO NEW BRAND STANDARDS -->
+<style>
+:root {
+  /* NEW BRAND PALETTE - Brenneis AI Teal System */
+  --color-primary: #134D62;      /* Deep Teal - Main brand, hero backgrounds */
+  --color-secondary: #2D7E92;    /* Mid Teal - Secondary elements */
+  --color-accent: #61B7CC;       /* Medium Cyan - Primary CTAs */
+  --color-highlight: #4B9EC2;    /* Sky Blue - Hover states, highlights */
+  
+  /* Neutrals */
+  --color-dark: #1A2F38;         /* Charcoal - Body text on light backgrounds */
+  --color-light: #FFFFFF;        /* Pure White */
+  --color-text-light: #E5F3F7;   /* Light text on dark backgrounds */
+  
+  /* System */
+  --nav-height: 80px;
+  --transition-speed: 300ms;    
+}
+
+/* Hero Section */
+.pricing-s1-section {
+  position: relative;
+  background: var(--color-dark);  /* Deep Teal background */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 32px;               
+  min-height: 600px;                
+}
+
+/* Content Container */
+.pricing-s1-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;                
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color-light);
+}
+
+/* H1 - Main Title */
+.pricing-s1-title {
+  font-size: 56px;                   
+  font-weight: 700;                  
+  line-height: 1.1;                  
+  letter-spacing: -0.02em;           
+  margin-bottom: 24px;               
+  color: var(--color-light);
+}
+
+.title-line {
+  display: block;
+}
+
+.title-line.highlight {
+  color: var(--color-highlight);     
+  font-size: 48px;                   
+  margin-top: 16px;                  
+}
+
+/* H2 - Subtitle */
+.pricing-s1-subtitle {
+  font-size: 24px;                   
+  font-weight: 600;                  
+  line-height: 1.2;                  
+  letter-spacing: -0.01em;          
+  margin-bottom: 32px;               
+  color: var(--color-text-light);    
+}
+
+/* Body Text */
+.pricing-s1-description {
+  font-size: 18px;                   
+  line-height: 1.6;                  
+  letter-spacing: 0;                 
+  margin-bottom: 40px;               
+  max-width: 700px;                  
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color-text-light);
+}
+
+/* CTA Container */
+.pricing-s1-cta {
+  margin-top: 40px;                  /* 8-point grid: 40px */
+}
+
+/* Primary CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 16px 32px;                
+  background: var(--color-accent);   
+  color: var(--color-light);
+  border-radius: 8px;               
+  text-decoration: none;
+  transition: all var(--transition-speed) ease;
+  border: none;
+  min-height: 48px;                  /* Minimum 48x48px touch target */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+/* Button Hover State */
+.cta-button:hover {
+  background: var(--color-highlight); /* Sky Blue hover */
+  transform: translateY(-2px);        /* Subtle 2px lift */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);  /* Increased shadow on hover */
+}
+
+/* Button Active State */
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Text */
+.button-text {
+  color: var(--color-light);         /* White text on teal button */
+  font-size: 16px;                   /* Standard button text: 16px */
+  font-weight: 500;                  /* Medium weight for buttons */
+  letter-spacing: 0.05em;           
+  display: inline-block;
+}
+
+/* Focus State for Accessibility */
+.cta-button:focus {
+  outline: 2px solid var(--color-highlight);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ======================================== */
+
+/* Tablet: 768px - 1023px */
+@media (max-width: 1023px) {
+  .pricing-s1-section {
+    padding: 80px 24px;              
+  }
+
+  .pricing-s1-title {
+    font-size: 42px;                 /* Scale down ~25% */
+  }
+
+  .title-line.highlight {
+    font-size: 36px;
+  }
+
+  .pricing-s1-subtitle {
+    font-size: 20px;
+  }
+
+  .pricing-s1-description {
+    font-size: 18px;                 /* Maintain 18px for readability */
+  }
+}
+
+/* Mobile: 320px - 767px */
+@media (max-width: 767px) {
+  .pricing-s1-section {
+    padding: 64px 24px;              /* 8-point grid: 64px vertical mobile */
+    min-height: auto;
+  }
+
+  .pricing-s1-title {
+    font-size: 36px;                 /* H1 mobile: 36-40px per guidelines */
+    margin-bottom: 16px;             /* Tighter spacing on mobile */
+  }
+
+  .title-line.highlight {
+    font-size: 32px;
+    margin-top: 8px;                 /* 8-point grid: 8px */
+  }
+
+  .pricing-s1-subtitle {
+    font-size: 18px;
+    margin-bottom: 24px;             /* 8-point grid: 24px */
+  }
+
+  .pricing-s1-description {
+    font-size: 16px;                 
+    line-height: 1.5;                
+    margin-bottom: 32px;             
+    padding: 0 8px;                
+  }
+
+  .pricing-s1-cta {
+    margin-top: 32px;
+  }
+
+  .cta-button {
+    width: 100%;                     /* Full width on mobile per guidelines */
+    padding: 16px 24px;              /* Maintain vertical padding, reduce horizontal */
+  }
+
+  .button-text {
+    font-size: 16px;                 /* Maintain 16px minimum */
+  }
+}
+
+/* Small Mobile: 320px - 575px */
+@media (max-width: 575px) {
+  .pricing-s1-section {
+    padding: 48px 16px;              
+  }
+
+  .pricing-s1-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .title-line.highlight {
+    font-size: 28px;
+  }
+
+  .pricing-s1-subtitle {
+    font-size: 16px;
+  }
+
+  .pricing-s1-description {
+    font-size: 16px;                 
+    padding: 0;
+  }
+}
+
+</style>
