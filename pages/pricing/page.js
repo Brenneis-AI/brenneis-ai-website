@@ -1,4 +1,8 @@
 <script>
+/* UPDATED 2026-03-14: Added focus trap to comparison modal + Escape key support — UX #3 */
+/* FIX 2026-03-17: GHL Footer Tracking Code runs after DOMContentLoaded has already fired — use readyState guard */
+function initPricingPage() {
+
     const plans = [
       {name:'Rookie League',tagline:'Step up to the plate—tools that just work.',price:'$127/mo',details:'Up to 1,000 contacts • Up to 5,000 emails • 200 SMS • 100 voice minutes • 400 AI Replies Per Month'},
       {name:'Single-A',tagline:'More at-bats, more leads, still lean.',price:'$197/mo',details:'Up to 2,500 contacts • Up To 10,000 emails • 400 SMS • 200 AI voice minutes • 800 AI Chat Replies Per Month'},
@@ -80,18 +84,74 @@
       if (+slider.value < plans.length - 1) { slider.value++; updatePlan(); }
     });
 
-    // Modal functionality
-    compareBtn.addEventListener('click', () => {
+    // Modal functionality with focus trap — UX #3
+    var modalTrapListener = null;
+    var modalTriggerElement = null;
+
+    function getFocusableElements(container) {
+      return Array.from(container.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      ));
+    }
+
+    function openModal(triggerEl) {
       modal.style.display = 'block';
-    });
-    modalClose.addEventListener('click', () => {
+      modalTriggerElement = triggerEl || null;
+
+      var focusable = getFocusableElements(modal);
+      if (focusable.length) { focusable[0].focus(); }
+
+      modalTrapListener = function(e) {
+        if (e.key === 'Escape') {
+          closeModal();
+          return;
+        }
+        if (e.key === 'Tab') {
+          var focusableNow = getFocusableElements(modal);
+          if (!focusableNow.length) { e.preventDefault(); return; }
+          var first = focusableNow[0];
+          var last  = focusableNow[focusableNow.length - 1];
+          if (e.shiftKey) {
+            if (document.activeElement === first) {
+              e.preventDefault();
+              last.focus();
+            }
+          } else {
+            if (document.activeElement === last) {
+              e.preventDefault();
+              first.focus();
+            }
+          }
+        }
+      };
+      document.addEventListener('keydown', modalTrapListener);
+    }
+
+    function closeModal() {
       modal.style.display = 'none';
-    });
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
+      if (modalTrapListener) {
+        document.removeEventListener('keydown', modalTrapListener);
+        modalTrapListener = null;
       }
+      if (modalTriggerElement) {
+        modalTriggerElement.focus();
+        modalTriggerElement = null;
+      }
+    }
+
+    compareBtn.addEventListener('click', function() { openModal(compareBtn); });
+    modalClose.addEventListener('click', closeModal);
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) { closeModal(); }
     });
 
     updatePlan();
+
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPricingPage);
+} else {
+  initPricingPage();
+}
 </script>

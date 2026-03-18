@@ -455,6 +455,7 @@ h1 {
 }
 
 .slider-label {
+  display: block;
   text-align: center;
   color: var(--color-primary);        /* Deep Teal */
   font-size: 20px;
