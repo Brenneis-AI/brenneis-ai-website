@@ -1,68 +1,61 @@
   <section class="container" id="pricing">
     <!-- BUILD FEE SECTION -->
-    <h1><strong>One-Time Build Fee</strong></h1>
+    <!-- UPDATED 2026-03-14: Changed h1 to h2 — true h1 lives in section-hero1.html — Fix #2 -->
+    <h2 class="section-h2"><strong>One-Time Build Fee</strong></h2>
     <p class="subheadline">
-      <strong>Build pricing depends on your website complexity and automation needs.</strong><br>
-      <em>We'll review your requirements during your free consultation and recommend the right build level.</em>
+      <strong>Build pricing reflects the size and scope of your project — not what you get access to.</strong><br>
+      <em>We'll review your requirements during your free consultation and recommend the right fit.</em>
     </p>
 
     <div class="build-cards">
       <div class="build-card">
         <h3>Simple Build</h3>
-        <p class="card-tagline">Basic website with essential automation. Perfect for getting started.</p>
+        <p class="card-tagline">The right starting point for smaller organizations.</p>
         <div class="build-price">$1,750</div>
         <div class="pages">up to 5 pages</div>
-        <ul>
-          <li>Custom design</li>
-          <li>Mobile-optimized</li>
-          <li>Basic automation</li>
-          <li>Up to 5 team seats</li>
-        </ul>
+        <p class="card-body">Custom design, mobile optimization, and automation built around how your organization actually works — everything you need to launch with confidence.</p>
       </div>
       <div class="build-card">
         <h3>Standard Build</h3>
-        <p class="card-tagline">More features, more automation. Built for growing organizations.</p>
+        <p class="card-tagline">For organizations with more pages and more workflows to manage.</p>
         <div class="build-price">$2,500-$3,500</div>
         <div class="pages">up to 10 pages</div>
-        <ul>
-          <li>Everything in Simple Build</li>
-          <li>Advanced automation workflows</li>
-          <li>Data migration included</li>
-          <li>Up to 10 team seats</li>
-        </ul>
+        <p class="card-body">Same quality as every Brenneis AI build. Larger sites naturally bring more moving parts — this scope accounts for that complexity.</p>
       </div>
       <div class="build-card">
         <h3>Complex Build</h3>
-        <p class="card-tagline">Comprehensive system with extensive automation and integrations.</p>
+        <p class="card-tagline">For organizations with significant scope — more pages, more systems, more to integrate.</p>
         <div class="build-price">$4,000-$5,000</div>
         <div class="pages">10+ pages</div>
-        <ul>
-          <li>Everything in Standard Build</li>
-          <li>Custom integrations</li>
-          <li>Member portal/database</li>
-          <li>10+ team seats</li>
-        </ul>
+        <p class="card-body">Designed and automated for your full scope from day one. If your organization has extensive page and workflow needs, this is where we start.</p>
       </div>
     </div>
 
-   <p class="subheadline" style="margin-top: 2rem; font-size: 1.3rem;">
+    <p class="build-comparison">Most agencies charge $5,000–$15,000 for a basic site, then disappear. Our builds start at $1,750 and include onboarding into ongoing support.</p>
+
+    <p class="build-cta-note"><em>Not sure where you fall? Book a free consultation — we'll tell you exactly what we'd recommend and why.</em></p>
+
+   <!-- UPDATED 2026-03-14: Extracted inline styles to page.css — Fix #3 -->
+   <p class="subheadline subheadline-discount">
   <strong>Virginia Nonprofits:</strong> 15% off build fee + flexible payment plans available<br>
   <strong>Veteran-Owned Businesses:</strong> 15% off build fee + flexible payment plans available<br>
-  <span style="font-size: 1rem; color: var(--color-text-muted);">(Discounts not stackable)</span>
+  <span class="discount-note">(Discounts not stackable)</span>
 </p>
 
     <!-- MONTHLY SUBSCRIPTION SECTION -->
-    <h1 style="margin-top:4rem;"><strong>Monthly Subscription Tiers</strong></h1>
+    <!-- UPDATED 2026-03-14: Changed h1 to h2, extracted inline margin to page.css — Fix #2, Fix #3 -->
+    <h2 class="section-h2 section-h2-subscription"><strong>Monthly Subscription Tiers</strong></h2>
     <div class="slider-container">
-      <div class="slider-label">
+      <!-- UPDATED 2026-03-14: Added aria labels and accessible associations to interactive controls — UX #2 -->
+      <label id="sliderLabel" class="slider-label" for="contactSlider">
         Pricing based on your contact volume and usage needs.<br>
         <span>Not sure which tier you need? We'll help you choose during your free audit.</span>
-      </div>
-      <input type="range" min="0" max="5" value="0" class="slider" id="contactSlider">
+      </label>
+      <input type="range" min="0" max="5" value="0" class="slider" id="contactSlider" aria-labelledby="sliderLabel">
 
       <div class="billing-toggle">
         <label>
-          <input type="checkbox" id="billingMode" />
+          <input type="checkbox" id="billingMode" aria-label="Toggle annual/monthly billing" />
           <span class="toggle-label">
             <span class="monthly-label" id="monthlyLabel">Monthly</span>
             <span class="switch"></span>
@@ -74,18 +67,19 @@
       </div>
 
       <div class="plan-wrapper">
-        <button class="arrow-btn" id="arrowLeft">&lt;</button>
+        <button class="arrow-btn" id="arrowLeft" aria-label="Previous plan">&lt;</button>
         <div class="plan-display" id="planDisplay"></div>
-        <button class="arrow-btn" id="arrowRight">&gt;</button>
+        <button class="arrow-btn" id="arrowRight" aria-label="Next plan">&gt;</button>
       </div>
 
       <button class="compare-btn" id="compareBtn">Compare All Tiers Side-by-Side →</button>
 
-      <p class="subheadline" style="margin-top: 2rem; font-size: 1.3rem;">
+      <!-- UPDATED 2026-03-14: Extracted inline styles to page.css — Fix #3 -->
+      <p class="subheadline subheadline-discount">
   <strong>All pricing shown is standard rate.</strong><br>
   Virginia nonprofits receive 15% off monthly subscriptions (forever).<br>
   Veteran-owned businesses receive 15% off monthly subscriptions (forever).<br>
-  <span style="font-size: 1rem; color: var(--color-text-muted);">(Discounts not stackable)</span>
+  <span class="discount-note">(Discounts not stackable)</span>
 </p>
     </div>
   </section>
@@ -93,7 +87,8 @@
   <!-- MODAL POPUP -->
   <div id="comparisonModal" class="modal">
     <div class="modal-content">
-      <span class="modal-close" id="modalClose">&times;</span>
+      <!-- UPDATED 2026-03-14: Changed span to button for keyboard accessibility — UX #2 -->
+      <button class="modal-close" id="modalClose" aria-label="Close comparison table">&times;</button>
 
       <div class="modal-header">
         <h2>Compare All Tiers</h2>
@@ -170,12 +165,13 @@
         </tbody>
       </table>
 
+      <!-- UPDATED 2026-03-14: Extracted inline styles to page.css — Fix #3; Changed absolute URL to relative — Fix #5 -->
       <div class="modal-footer">
   <p><strong>Virginia Nonprofits:</strong> 15% off all monthly tiers (forever)</p>
   <p><strong>Veteran-Owned Businesses:</strong> 15% off all monthly tiers (forever)</p>
-  <p style="font-size: 0.95rem; color: var(--color-text-muted);">(Discounts not stackable)</p>
-  <p style="margin-top: 1rem;">Most organizations start on Rookie or Single-A tier.</p>
-  <a href="https://brenneisai.com/calendar" class="modal-cta">Book Your Free Audit</a>
+  <p class="modal-footer-note">(Discounts not stackable)</p>
+  <p class="modal-footer-starter">Most organizations start on Rookie or Single-A tier.</p>
+  <a href="/calendar" class="modal-cta">Book Your Free Audit</a>
 </div>
     </div>
   </div>
