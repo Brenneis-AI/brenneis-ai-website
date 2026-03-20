@@ -1,4 +1,7 @@
 <script>
+/* UPDATED 2026-03-14: Wrapped all DOM selectors in DOMContentLoaded to prevent null reference errors in GHL — UX #1 */
+document.addEventListener('DOMContentLoaded', function() {
+
   // DESKTOP: Feature hover interaction
   const featureItems = document.querySelectorAll('.feature-item');
   const featureImages = document.querySelectorAll('.feature-image');
@@ -32,4 +35,6 @@
       card.classList.toggle('active');
     });
   });
+
+}); // end DOMContentLoaded
 </script>

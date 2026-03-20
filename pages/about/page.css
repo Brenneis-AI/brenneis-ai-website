@@ -30,22 +30,7 @@
   --transition: 300ms ease;
 }
 
-/* ========================================
-   BASE STYLES
-   ======================================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-body);
-  background: var(--color-light);
-  color: var(--color-dark);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+/* UPDATED 2026-03-14: Removed global * reset and body rule — scoped to GHL safe selectors — Fix #1 */
 
 /* ========================================
    HERO SECTION
@@ -91,10 +76,11 @@ body {
   margin-top: 8px;
 }
 
+/* UPDATED 2026-03-14: Changed color: white to color: #FFFFFF — UX #8 */
 .hero .subtitle {
   font-size: 30px;
   line-height: 1.4;
-  color: white;
+  color: #FFFFFF;
   margin-bottom: 40px;
 }
 
@@ -250,19 +236,7 @@ body {
   object-fit: cover;
 }
 
-.image-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
-  font-size: 16px;
-  color: var(--color-text-muted);
-  font-style: italic;
-  text-align: center;
-  line-height: 1.5;
-}
+/* REMOVED 2026-03-14: Orphaned .image-placeholder block — no .image-placeholder elements in section-main.html — Perf #4 */
 
 /* ========================================
    PULL QUOTE SECTIONS
@@ -402,8 +376,91 @@ body {
 }
 
 /* ========================================
+   MID-PAGE CTA SECTION
+   ======================================== */
+/* UPDATED 2026-03-14: Added .mid-cta-section styles — UX #5 */
+.mid-cta-section {
+  background: #1A2F38;
+  padding: 64px 48px;
+  text-align: center;
+}
+
+.mid-cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.mid-cta-text {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+/* ========================================
    RESPONSIVE DESIGN
    ======================================== */
+/* UPDATED 2026-03-14: Added 991px intermediate breakpoint for tablet — UX #6 */
+@media (max-width: 991px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 60px 0 20px 0;
+  }
+
+  .hero-content {
+    text-align: center;
+    padding: 0 40px;
+  }
+
+  .hero-image {
+    justify-content: center;
+    min-height: 300px;
+  }
+
+  .about-image-wrapper {
+    justify-content: center;
+  }
+
+  .chapter {
+    padding: 64px 32px;
+  }
+
+  .chapter-header h2 {
+    font-size: 36px;
+  }
+
+  .story-card {
+    gap: 40px;
+  }
+
+  .pull-quote blockquote {
+    font-size: 28px;
+  }
+
+  .stats-bar {
+    padding: 56px 32px;
+  }
+
+  .final-declaration {
+    padding: 80px 32px;
+  }
+
+  .final-declaration h2 {
+    font-size: 40px;
+  }
+
+  .mid-cta-section {
+    padding: 48px 32px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: 80px 24px 64px 24px;
@@ -449,4 +506,6 @@ body {
   .final-declaration { padding: 80px 24px; }
   .final-declaration h2 { font-size: 32px; }
   .final-declaration p { font-size: 18px; }
+  .mid-cta-section { padding: 48px 24px; }
+  .mid-cta-text { font-size: 20px; }
 }

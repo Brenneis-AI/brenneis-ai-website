@@ -209,6 +209,8 @@
 @media (max-width: 479px) {
   .hero-container { padding: 48px 20px; }
   .hero-image-wrapper { max-width: 100%; }
+  /* UPDATED 2026-03-14: Override clamp(700px, 55vw, 900px) min which overflows on narrow viewports — UX #4 */
+  .hero-bottom-section { max-width: 100%; }
 }
 
 .btn-primary:focus,
@@ -217,13 +219,29 @@
   outline-offset: 3px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+/* UPDATED 2026-03-14: Added hero entrance animation on .hero-content — Enh #3 */
+@keyframes heroEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+.hero-content {
+  animation: heroEntrance 400ms ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content {
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* REMOVED 2026-03-14: Universal *, *::before, *::after prefers-reduced-motion block removed — GHL bleed risk; 12 scoped per-section blocks below are sufficient — Perf #2 */
 
 /* ========================================
    SECTION 2: AUTOMATION BENEFITS
@@ -326,7 +344,7 @@
   font-weight: 400;
   font-size: clamp(16px, 1.1vw, 18px);
   line-height: 1.6;
-  color: #ffffff;
+  color: #FFFFFF;
   margin: 0;
 }
 
@@ -954,12 +972,14 @@
   margin: 0 0 16px 0;
 }
 
+/* UPDATED 2026-03-14: Standardized color: white to color: #FFFFFF — UX #8 */
+/* FIXED 2026-03-14: Remaining color: white / color: #ffffff instances corrected — UX #8 QA pass */
 .step-description {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   font-size: clamp(15px, 1.1vw, 17px);
   line-height: 1.6;
-  color: white;
+  color: #FFFFFF;
   margin: 0 0 20px 0;
   flex-grow: 1;
 }
@@ -1090,13 +1110,14 @@
   margin: 0 auto 64px auto;
 }
 
+/* UPDATED 2026-03-14: Standardized color: white to color: #FFFFFF — UX #8 */
 .pricing-teaser-headline {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(36px, 3vw, 48px);
   line-height: 1.2;
   letter-spacing: -1px;
-  color: white;
+  color: #FFFFFF;
   margin: 0 0 24px 0;
 }
 
@@ -1191,7 +1212,7 @@
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
   font-size: clamp(15px, 1.1vw, 17px);
-  color: white;
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1455,139 +1476,4 @@
   }
 }
 
-/* ========================================
-   SECTION: Final CTA
-   ======================================== */
-
-.final-cta-section {
-  background: #1A2F38; /* Dark navy-teal - matches hero */
-  padding: clamp(80px, 10vw, 120px) clamp(24px, 4vw, 60px);
-  position: relative;
-  text-align: center;
-}
-
-.final-cta-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* ========================================
-   HEADLINE
-   ======================================== */
-
-.final-cta-headline {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: clamp(32px, 3vw, 48px);
-  line-height: 1.2;
-  letter-spacing: -1px;
-  color: #FFFFFF;
-  margin: 0 0 24px 0;
-}
-
-/* ========================================
-   SUBHEADLINE
-   ======================================== */
-
-.final-cta-subheadline {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: clamp(18px, 1.4vw, 22px);
-  line-height: 1.6;
-  color: #61B7CC; /* Light teal */
-  margin: 0 0 40px 0;
-}
-
-/* ========================================
-   CTA BUTTON
-   ======================================== */
-
-.final-cta-button-wrapper {
-  margin-bottom: 24px;
-}
-
-.btn-final-cta {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: clamp(16px, 1.3vw, 20px);
-  letter-spacing: 1px;
-  color: #1A2F38; /* Dark text */
-  background: #61B7CC; /* Light teal */
-  padding: 20px 48px;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 300ms ease;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.btn-final-cta:hover {
-  background: #4B9EC2; /* Sky blue */
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
-}
-
-.btn-final-cta:active {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* ========================================
-   TRUST STATEMENT
-   ======================================== */
-
-.final-cta-trust {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 300;
-  font-size: clamp(14px, 1.1vw, 16px);
-  line-height: 1.5;
-  color: #F8F9FA;
-  margin: 0;
-  opacity: 0.9;
-}
-
-/* ========================================
-   RESPONSIVE BREAKPOINTS
-   ======================================== */
-
-@media (max-width: 767px) {
-  .final-cta-section {
-    padding: clamp(56px, 8vw, 80px) clamp(20px, 4vw, 40px);
-  }
-
-  .final-cta-headline {
-    margin-bottom: 20px;
-  }
-
-  .final-cta-subheadline {
-    margin-bottom: 32px;
-  }
-
-  .btn-final-cta {
-    width: 100%;
-    max-width: 360px;
-    padding: 18px 40px;
-  }
-}
-
-@media (max-width: 479px) {
-  .btn-final-cta {
-    max-width: 100%;
-  }
-}
-
-/* ========================================
-   ACCESSIBILITY
-   ======================================== */
-
-.btn-final-cta:focus {
-  outline: 3px solid #FFFFFF;
-  outline-offset: 3px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .btn-final-cta {
-    transition: none !important;
-  }
-}
+/* REMOVED 2026-03-14: Orphaned .final-cta-section block — no corresponding HTML section exists — Perf #3 */

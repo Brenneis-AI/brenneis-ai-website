@@ -1,17 +1,6 @@
 /* CASE STUDY PAGE — CONSOLIDATED STYLES */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #2D7E92;
-  line-height: 1.6;
-  background: #FFFFFF;
-}
+/* UPDATED 2026-03-14: Removed global * reset and body rule (body color: #2D7E92 is a GHL bleed risk) — Fix #1 */
 
 /* ========================================
    HERO SECTION
