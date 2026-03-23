@@ -271,6 +271,62 @@
 }
 
 /* ========================================
+   PARABLE SECTION
+   Dark background continuation from hero.
+   Centered narrative block, larger type,
+   dialogue visually distinct, anchor line bold.
+   ======================================== */
+.parable-section {
+  background: var(--color-dark);
+  padding: 80px 48px 96px;
+  text-align: center;
+}
+
+.parable-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.parable-content p {
+  font-family: var(--font-body);
+  font-size: 22px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.parable-content p:last-child {
+  margin-bottom: 0;
+}
+
+.parable-content p em {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+.parable-dialogue {
+  padding-left: 40px;
+  padding-right: 40px;
+  border-left: 3px solid rgba(97, 183, 204, 0.4);
+  text-align: left !important;
+  font-size: 24px !important;
+}
+
+.parable-anchor {
+  margin-top: 48px !important;
+  font-size: 28px !important;
+  line-height: 1.4 !important;
+}
+
+.parable-anchor strong {
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* ========================================
    STATS/PROOF BAR
    ======================================== */
 .stats-bar {
@@ -459,6 +515,22 @@
   .mid-cta-section {
     padding: 48px 32px;
   }
+
+  .parable-section {
+    padding: 64px 32px 80px;
+  }
+
+  .parable-content p {
+    font-size: 20px;
+  }
+
+  .parable-dialogue {
+    font-size: 22px !important;
+  }
+
+  .parable-anchor {
+    font-size: 26px !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -508,4 +580,8 @@
   .final-declaration p { font-size: 18px; }
   .mid-cta-section { padding: 48px 24px; }
   .mid-cta-text { font-size: 20px; }
+  .parable-section { padding: 56px 24px 64px; }
+  .parable-content p { font-size: 18px; margin-bottom: 24px; }
+  .parable-dialogue { font-size: 20px !important; padding-left: 24px; padding-right: 24px; }
+  .parable-anchor { font-size: 22px !important; margin-top: 36px !important; }
 }
